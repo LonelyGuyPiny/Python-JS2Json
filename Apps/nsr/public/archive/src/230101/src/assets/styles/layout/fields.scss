@@ -1,0 +1,29 @@
+input{
+    background: $white;
+    border: 1px solid $gray-100;
+    @include border-radius(6px);
+}
+select{
+    background: $white;
+    border: 1px solid $gray-100;
+    @include border-radius(6px);
+}
+
+.ui{
+ &.form{
+    input[type=email], input[type=password], input[type=search], input[type=text]{
+        background: $white;
+        border: 1px solid $gray-100;
+        @include border-radius(6px);
+        // padding: 14px;
+        // margin-top: 5px;
+        @include margin-padding(all, 0.3571em 0 0 0, all, 1em 1em 1em 1em);
+        @include font-rem(16px, 24px);
+        
+    }
+    .label{
+        // font-size: 16px;
+        @include font-rem(16px, 24px);
+    }
+ }
+}

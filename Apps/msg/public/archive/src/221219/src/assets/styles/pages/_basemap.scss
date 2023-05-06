@@ -1,0 +1,46 @@
+.basemap-field {
+    width: 100%;
+    @include flex(flex);
+    @include flex-direction(column);
+
+    .ui {
+        &.checkbox {
+            width: 100%;
+
+            &:before {
+                content: "";
+                width: 0px;
+                height: 41px;
+                background: $hover-color;
+                // @include transition(all .3s ease-in-out);
+                // left: 0px;
+                // top: 0px;
+                // position: absolute;
+                @include absolute(top 0px right 0 bottom 0 left 0px);
+            }
+        }
+
+        &.checked {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+}
+
+*[dir="rtl"] {
+    // .basemap-heading {
+    //     margin-left: 26px;
+    // }
+
+    .basemap-field {
+        .ui {
+            &.checkbox {
+                &:before {
+                    left: auto;
+                    right: 0px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,181 @@
+//
+// Color system
+//
+
+$white: #fff !default;
+$lightgray: #eff0f3 !default;
+$gray-100: #dedede !default;
+$gray-200: #dadada !default;
+$gray-300: #b7bfc7 !default;
+$gray-700: #808080 !default;
+$gray-800: #677d94 !default;
+$gray-900: #383838 !default;
+$gray-prim:#253C4F!default;
+$black: #16273a !default;
+$border-sidemenu:#2B3A4C !default;
+$primary-grey: #fcfcfc !default;
+$primary-darkgrey: #F3F6F9 !default;
+$primary-black: #253C4F !default;
+$checkbox-color: #E0E0E0 !default;
+$toggle-grey: #D9D9D9 !default;
+$hover-color: #F8F9FD !default;
+$input-color:#F3F6F9 !default;
+$button-grey:#F3F6F9!default;
+$button-primary:#1BC5BD!default;
+$toc-header:#E3F6F5!default;
+$checkbox-default-color:#697783!default;
+
+
+$blue: #1BC5BD !default;
+$pure-black: #000 !default;
+$blue-secondary: #00bbdb !default;
+$red: #f54b5b !default;
+$red-secondary: #ee717f !default;
+$red-button: #DC5D55 !default;
+$green: #37c489 !default;
+$green-label-light: #e5f8f0 !default;
+$yellow: #f1c35a !default;
+$yellow-primary: #F8D654 !default;
+$yellow-secondary: #f7d486 !default;
+$cyan: #71d8f4 !default;
+
+$purple: #806BFF !default;
+$purple-secondary: #9C9EFF !default;
+
+$color1: #00dce5;
+$color2: #00cef1;
+
+$primary: $blue !default;
+$secondary: $gray-300 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $black !default;
+
+$none: none !default;
+$hidden: hidden !default;
+$auto: auto !default;
+$zero: 0 !default;
+$normal: normal !default;
+
+// position Variables
+$position-fixed: fixed !default;
+$position-relative: relative !default;
+$position-absolute: absolute !default;
+
+// Display Variables
+
+$display-block: block !default;
+$diplay-none: none !default;
+$display-list-item: list-item !default;
+$display-inline-block: inline-block !default;
+
+// width variables
+
+$full-width: 100% !default;
+$half-width: 50% !default;
+$normal: normal !default;
+
+// Font family
+
+$font-stack: "Roboto", sans-serif !default;
+$font-rubik: "Rubik", sans-serif;
+$font-regular: 400;
+$font-medium: 500;
+
+// base font
+
+$rem-base-font: 16px;
+
+// Align items variables
+
+$text-left: center !default;
+$text-right: center !default;
+$text-center: center !default;
+$text-justify: justify !default;
+
+// margin variables
+
+$margin-left-auto: auto !default;
+$margin-right-auto: auto !default;
+$margin-auto: auto !default;
+$margin-top1: 1rem;
+$margin-top2: 2rem;
+$margin-top3: 3rem;
+$margin-top4: 4rem;
+$margin-top5: 5rem;
+$margin-top6: 6rem;
+$margin-top7: 7rem;
+$margin-top8: 8rem;
+$margin-top9: 9rem;
+$margin-top10: 10rem;
+$margin-top14: 14rem;
+
+$margin-left1: 1rem;
+$margin-left2: 2rem;
+$margin-left3: 3rem;
+$margin-left4: 4rem;
+$margin-left5: 5rem;
+$margin-left6: 6rem;
+$margin-left7: 7rem;
+$margin-left8: 8rem;
+$margin-left9: 9rem;
+$margin-left10: 10rem;
+
+$margin-right1: 1rem;
+$margin-right2: 2rem;
+$margin-right3: 3rem;
+$margin-right4: 4rem;
+$margin-right5: 5rem;
+$margin-right6: 6rem;
+$margin-right7: 7rem;
+$margin-right8: 8rem;
+$margin-right9: 9rem;
+$margin-right10: 10rem;
+
+$margin-bottom0:0px;
+
+$margin-bottom1: 1rem;
+$margin-bottom2: 2rem;
+$margin-bottom3: 3rem;
+$margin-bottom4: 4rem;
+$margin-bottom5: 5rem;
+$margin-bottom6: 6rem;
+$margin-bottom7: 7rem;
+$margin-bottom8: 8rem;
+$margin-bottom9: 9rem;
+$margin-bottom10: 10rem;
+
+
+// text decoration variables
+
+$text-decoration-underline: underline !default;
+$text-decoration-none: none !default;
+$text-uppercase: uppercase !default;
+$text-capitalize: capitalize !default;
+$text-lowercase: lowercase !default;
+
+// Visibility Variables
+
+$visibilty-hidden: hidden !default;
+$visibilty-visible: visible !default;
+
+// Fluid Variables
+
+$min_width: 320px !default;
+$max_width: 1920px !default;
+$min_font: 16px !default;
+$max_font: 20px !default;
+
+// @media Query css variables
+$break-laptop: 1366px;
+$break-xlarge: 1199px;
+$break-xmlarge: 1024px;
+$break-large: 991px;
+$break-medium: 767px;
+$iphone-plus: 736px;
+$break-small: 667px;
+$small-screen-up:639px;
+$break-xsmall: 480px;

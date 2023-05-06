@@ -1,0 +1,574 @@
+// Flexbox interpolation 
+
+
+@mixin flex($properties) {
+  @if $properties == 'flex' {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+  } @else if $properties == 'inline-flex' {
+      display: -ms-inline-flexbox;
+      display: -webkit-inline-flex;
+      display: inline-flex;
+  } @else if $properties == 'inline-block' {
+      display: inline-block;
+  } @else if $properties == 'block' {
+      display: block;
+} @else if $properties == 'none' {
+      display: none;
+} @else if $properties == 'list-item' {
+      display: list-item;
+  }
+}
+
+// Usage
+
+// @include flex(flex);
+
+@mixin flex-direction($properties) {
+  -webkit-flex-direction: $properties;
+  -ms-flex-direction: $properties;
+  flex-direction: $properties;
+}
+
+// Usage 
+
+// @include flex-direction();
+
+
+@mixin flex-wrap($properties) {
+  @if $properties == 'nowrap' {
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  } @else if $properties == 'wrap' {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  } @else if $properties == 'wrap-reverse' {
+      -webkit-flex-wrap: wrap-reverse;
+      -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  }
+}
+
+// Usage 
+
+// @include flex-wrap(wrap);
+
+
+@mixin justify($properties) {
+  @if $properties == 'flex-start' {
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+  } @else if $properties == 'flex-end' {
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+  } @else if $properties == 'center' {
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+  } @else if $properties == 'space-between' {
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+  } @else if $properties == 'space-around' {
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+  }
+}
+
+// Usage 
+
+// @include justify(center);
+
+@mixin align-items($properties) {
+  @if $properties == 'flex-start' {
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+  } @else if $properties == 'flex-end' {
+      -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+  } @else if $properties == 'center' {
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+  } @else if $properties == 'baseline' {
+      -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+      align-items: baseline;
+  } @else if $properties == 'stretch' {
+      -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+  }
+}
+
+// Usage 
+
+// @include align-items(center);
+
+@mixin align-self($properties) {
+  @if $properties == 'auto' {
+      -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      align-self: auto;
+  } @else if $properties == 'flex-start' {
+      -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+      align-self: flex-start;
+  } @else if $properties == 'flex-end' {
+      -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+      align-self: flex-end;
+  } @else if $properties == 'center' {
+      -webkit-align-self: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+  } @else if $properties == 'baseline' {
+      -webkit-align-self: baseline;
+      -ms-flex-item-align: baseline;
+      align-self: baseline;
+  } @else if $properties == 'stretch' {
+      -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+      align-self: stretch;
+  }
+}
+
+// Usage 
+
+//  @include align-self (flex-start);
+
+
+// Box shadow Mixin
+
+@mixin box-shadow($leftshadow, $topshadow, $blurshadow, $colorShadow) {
+-webkit-box-shadow: $leftshadow $topshadow $blurshadow $colorShadow;
+-moz-box-shadow: $leftshadow $topshadow $blurshadow $colorShadow;
+box-shadow: $leftshadow $topshadow $blurshadow $colorShadow;
+}
+
+// Usage 
+
+// @include box-shadow(0, 0, 0, rgba(0,0,0,1));
+
+// Transition Mixin
+
+@mixin transition($transiton) {
+-webkit-transition: $transiton;
+-moz-transition: $transiton;
+-ms-transition: $transiton;
+-o-transition: $transiton;
+transition: $transiton;
+}
+
+// Usage 
+
+// @include transition(all 0.5s);
+
+// Padding And Margin Mixin
+
+@mixin margin-padding($m-direction, $m-amount, $p-direction, $p-amount) { //  ================================================================= Use this
+@if $m-direction == all {
+  margin: $m-amount;
+} @else {
+  margin-#{$m-direction}: $m-amount;
+}
+@if $p-direction == all {
+  padding: $p-amount;
+} @else {
+  padding-#{$p-direction}: $p-amount;
+}
+}
+
+// Uage 
+
+// @include margin-padding(all, 0 0 0 0, all, 0 0 0 0);
+// @include margin-padding(all, 0 0 0 0, all, null);
+
+// Verticle align Mixin
+
+@mixin vertical-align($align) {
+
+	@if $align == top {
+		vertical-align: $top-align;
+	} @else if $align == middle {
+		vertical-align: $middle-align;
+	} @else if $align == bottom {
+		vertical-align: $bottom-align;
+  }  @else {
+		@error "Unknown alignement #{$align}.";
+	}
+
+}
+
+// Usage
+
+// @include vertical-align(mdiddle);
+
+
+// Margin Mixin
+
+@mixin margin-direction($direction) {
+
+	@if $direction == left {
+		margin-left: auto;
+	} @else if $direction == right {
+		margin-right: auto;
+	} @else if $direction == auto {
+		margin-left: auto;
+		margin-right: auto;
+	} @else {
+		@error "Unknown alignement #{$direction}.";
+	}
+}
+
+// Usage 
+
+// @include margin-direction(left);
+// @include margin-direction(auto);
+
+@mixin rtl($property, $ltr-value, $rtl-value) {
+    #{$property}: $ltr-value;
+  
+    [dir=rtl] & {
+      #{$property}: $rtl-value;
+    }
+  }
+
+// @include rtl(float, left, right);
+
+
+// Border radius with Condition
+
+@mixin square($size, $radius: 0) {
+    width: $size;
+    height: $size;
+  
+    @if $radius != 0 {
+      border-radius: $radius;
+    }
+  }
+  
+// @include square(100px, $radius: 4px);
+
+
+@mixin headings($h1: 40px, $decreaseBy: 5px) {
+	@for $i from 1 through 6 {
+	   h#{$i} {
+		  font-size: ($h1+$decreaseBy) - $i * $decreaseBy;
+	   }
+	}
+ }
+ 
+ // @include headings(60px, 8px);
+
+
+// Input Placeholder Mixin
+
+@mixin input-placeholder {
+	&.placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		@content;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+	&::-webkit-input-placeholder {
+		@content;
+	}
+}
+
+// Usage
+
+//  @include input-placeholder;
+
+
+// Appearence Mixin
+
+@mixin appearance($val: none) {
+	-webkit-appearance: $val;
+	-moz-appearance: $val;
+	appearance: $val;
+}
+
+// Usage 
+
+// @include appearance(none);
+
+
+// Font size and line height mixin
+
+@mixin font-rem($font-size, $line-height: 0) {  //  ================================================================= Use this
+	// font-size: $font-size;
+	font-size: ($font-size / $rem-base-font) * 1rem;
+	@if ($line-height > 0) {
+		// line-height: $line-height;
+		line-height: ($line-height / $rem-base-font) * 1rem;
+	}
+}
+
+// Usage
+
+// @include font-rem(14px, 24px);
+
+
+// Font size mixin
+
+@mixin font-size($sizeValue: 1.6 + x) {
+  // font-size: ($sizeValue * 10) + px;
+  // font-size: $sizeValue + em;
+  font-size: ($sizeValue * 1) + em;
+}
+
+
+
+// @include font-size(13);
+
+// Avtar Mixin
+
+@mixin avatar($size, $circle: false) {
+	width: $size;
+	height: $size;
+
+	@if $circle {
+		border-radius: $size / 2;
+	}
+}
+
+// Usage
+
+// .square-av { @include avatar(100px, $circle: false); }
+
+
+// Triangle Mixin
+
+@mixin triangle($size, $color, $direction) {
+	height: 0;
+	width: 0;
+
+	border-color: transparent;
+	border-style: solid;
+	border-width: $size / 2;
+
+	@if $direction == up {
+		border-bottom-color: $color;
+	} @else if $direction == right {
+		border-left-color: $color;
+	} @else if $direction == down {
+		border-top-color: $color;
+	} @else if $direction == left {
+		border-right-color: $color;
+	} @else {
+		@error "Unknown direction #{$direction}.";
+	}
+}
+
+// Usage
+
+//   @include triangle(5px, black, right);
+
+
+// Transform Mixin
+
+@mixin transform($property) {
+	-webkit-transform: $property;
+	-ms-transform: $property;
+	transform: $property;
+}
+
+//  Usage
+
+// @include transform(rotate(30deg));
+
+// Border Radius Mixin
+
+@mixin border-radius($pixel...) {
+	border-radius: $pixel;
+	-moz-border-radius: $pixel;
+	-webkit-border-radius: $pixel;
+	-ms-border-radius: $pixel;
+}
+
+// Usage
+
+// @include border-radius(10px 5px 20px 10px);
+
+
+// Border radius with Condition
+
+@mixin square($size, $radius: 0) {
+  width: $size;
+  height: $size;
+
+  @if $radius != 0 {
+    border-radius: $radius;
+  }
+}
+
+
+// @include square(100px, $radius: 4px);
+
+
+@mixin headings($h1: 40px, $decreaseBy: 5px) {
+@for $i from 1 through 6 {
+   h#{$i} {
+    font-size: ($h1+$decreaseBy) - $i * $decreaseBy;
+   }
+}
+}
+
+// @include headings(60px, 8px);
+
+
+// Responsive Mixin
+
+@mixin breakpoint($point) {
+  @if $point == lg {
+    @media (max-width:$lg-breakepoint) { @content ; }
+ }
+  @else if $point == md {
+    @media (max-width:$md-breakepoint) { @content ; }
+ }
+   @else if $point == sm {
+    @media (max-width:$sm-breakepoint) { @content ; }
+ }
+  @else if $point == xs {
+    @media (max-width:$xs-breakepoint)  { @content ; }
+ }
+ @else if $point == vs {
+    @media (max-width:$vs-breakepoint)  { @content ; }
+
+ }
+}
+
+
+// Verticle align Mixin
+
+@mixin vertical-align($align) {
+
+	@if $align == top {
+		vertical-align: $top-align;
+	} @else if $align == middle {
+		vertical-align: $middle-align;
+	} @else if $align == bottom {
+		vertical-align: $bottom-align;
+  }  @else {
+		@error "Unknown alignement #{$align}.";
+	}
+
+}
+
+// Usage
+
+// @include vertical-align(mdiddle);
+
+
+// Margin Mixin
+
+@mixin margin-direction($direction) {
+
+	@if $direction == left {
+		margin-left: auto;
+	} @else if $direction == right {
+		margin-right: auto;
+	} @else if $direction == auto {
+		margin-left: auto;
+		margin-right: auto;
+	} @else {
+		@error "Unknown alignement #{$direction}.";
+	}
+}
+
+// Usage 
+// @include margin-direction(left);
+
+@mixin rtl($property, $ltr-value, $rtl-value) {
+    #{$property}: $ltr-value;
+  
+    [dir=rtl] & {
+      #{$property}: $rtl-value;
+    }
+  }
+  
+
+// @include rtl(float, left, right);
+
+
+// Position Mixin
+
+@mixin position($position, $args) {
+	@each $o in top right bottom left {
+		$i: index($args, $o);
+		@if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
+			#{$o}: nth($args, $i + 1);
+		}
+	}
+	position: $position;
+}
+
+
+// Positioning helpers
+@mixin absolute($args: "") {
+	@include position(absolute, $args);
+}
+
+@mixin fixed($args: "") {
+	@include position(fixed, $args);
+}
+
+@mixin relative($args: "") {
+	@include position(relative, $args);
+}
+
+
+// Usage
+
+// @include absolute(top 0 right 0 bottom 0 right 0);
+
+
+/* Mixins */
+
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  } 
+}
+
+@mixin gradient($color1, $color2) {
+    background: $color1;
+    background: -webkit-linear-gradient(left, $color1 0%, $color2 80%);
+    background: -webkit-gradient(linear, left top, right top, from($color1), color-stop(80%, $color2));
+    background: linear-gradient(to right, $color1 0%, $color2 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=1 );
+}
+
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: 64.375em) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 50em) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: 37.5em)  { @content; }
+  }
+}

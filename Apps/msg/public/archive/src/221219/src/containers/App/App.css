@@ -1,0 +1,161 @@
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.ui.basic.label {
+  background: none;
+  border: 0px;
+}
+
+.ui.label {
+  background: none;
+  padding: 0px;
+  font-size: 0.8125em;
+  color: black;
+}
+
+label {
+  display: inline-block;
+  padding-right: 0.625em;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  min-width: 100%;
+  height: 100%;
+}
+
+.lang-selector {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  z-index: 9999;
+}
+
+.lang-selector span {
+  display: inline-block;
+  background: #fff;
+  padding: 0.1875em 0.625em;
+  margin-right: 0.3125em;
+  border: 1px solid #000;
+}
+.lang-selector span:hover,
+.lang-selector span.active {
+  cursor: pointer;
+  background-color: black;
+  color: #fff;
+}
+
+#progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: rgba(244, 67, 54, 0.5);
+  width: 0;
+  -webkit-transition: width 250ms;
+  transition: width 250ms;
+  z-index: 9999;
+}
+
+.parentMenu .menuwithList {
+  /* max-height: 900px; */
+  /* If use the "height: auto", the effect not works. Is necessary some value for the CSS create a CSS animate, and we can use "max-height" with a great value for emulate this effect. */
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -ms-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+}
+.parentMenu.hide .menuwithList {
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -ms-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+  overflow: hidden;
+  /* "height: 0" not work with css transitions */
+  max-height: 0;
+}
+
+.ol-scale-line.ol-unselectable {
+  display: none;
+}
+
+div#lm-layer-1-1 {
+  margin-top: -33px !important;
+}
+div#lm-layer-1-1.lm-invisible,
+div.lm-invisible {
+  margin-top: -14px !important;
+}
+.layer-menu-block {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+div#resize {
+  position: absolute;
+  top: 9%;
+  width: 35px;
+  right: -35px;
+  background-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: w-resize;
+  z-index: 9999;
+  height: 61px !important;
+  border-radius: 0 8px 8px 0;
+}
+div#resize svg#resizer {
+  position: absolute;
+  top: 46%;
+  fill: #313c46;
+  left: 16%;
+}
+.custom-mouse-position {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: white;
+  padding: 10px;
+}
+
+.ol-scale-line.ol-unselectable {
+  display: block;
+}
+
+.spatialHide {
+  display: none!important;
+}
+
+.ui.inverted.dimmer {
+  background-color: rgba(255,255,255,.85)!important;
+}
+
+.halfWidth {
+  width: 50% !important;
+  height: 100%;
+  float: left;
+}
+
+.head-text-col {
+  position: absolute;
+  width: auto;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: 0;
+}
+
+.prev-next-loacation  {
+  position: fixed;
+  right: 72px;
+  top: 20px;
+  z-index: 9;
+}

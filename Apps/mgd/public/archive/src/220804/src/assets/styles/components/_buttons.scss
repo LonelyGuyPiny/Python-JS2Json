@@ -1,0 +1,163 @@
+.ui {
+    .btn {
+        color: $white;
+        text-decoration: none;
+        padding: 0.58571429em 0.625em 0.58571429em;
+        border-radius: 3px;
+        font-family: "Poiret One", cursive;
+        font-size: 2em;
+        text-transform: capitalize;
+        i.icon {
+            margin: 0px !important;
+        }
+    }
+
+    .btn-default {
+        /* Button Label 1 */
+        font-size: 1.125em;
+        line-height: 1.125em;
+        @include flex(flex);
+        @include align-items(center);
+        @include justify(center);
+
+        /* black */
+        color: $black;
+        border-radius: 12px;
+        background-color: $white;
+        text-transform: capitalize;
+
+        &:focus {
+            background-color: $white;
+            color: $black;
+        }
+    }
+
+    .btn-blue {
+        /* Button Label 1 */
+        font-size: 1.125em;
+        line-height: 1.125em;
+        @include flex(flex);
+        @include align-items(center);
+        @include justify(center);
+
+        /* black */
+        color: $white;
+        border-radius: 12px;
+        background-color: $blue;
+        text-transform: capitalize;
+
+        &:focus {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+    .btn-full {
+        width: 100%;
+        @include border-radius(5px);
+        text-transform: capitalize;
+    }
+    .border-radius-l0 {
+        @include border-radius(0px 10px 10px 0px);
+    }
+    .border-radius-r0 {
+        @include border-radius(10px 0px 0px 10px);
+    }
+}
+.btn-lg {
+    max-width: 200px;
+    height: 45px;
+}
+.btn-sm {
+    max-width: 110px;
+    height: 38px;
+}
+.btn-green {
+    @include button-bg($green);
+}
+
+.btn-blue {
+    @include button-bg($blue);
+}
+
+.btn-yellow {
+    @include button-bg($yellow);
+}
+
+.btn-red {
+    @include button-bg($red);
+}
+.button {
+    font-family: "Rubik", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: calc(13px + (13 - 13) * (100vw - 400px) / (1920 - 400)) !important;
+}
+.button-primary {
+    background-color: $button-primary !important;
+    border-color: $button-primary !important;
+    font-size: calc(14px + (15 - 14) * (100vw - 400px) / (1920 - 400));
+    color: $white !important;
+}
+.button-border {
+    border-color: $button-primary !important;
+    font-size: calc(14px + (15 - 14) * (100vw - 400px) / (1920 - 400));
+    color: $blue !important;
+    background-color: transparent !important;
+    a {
+        color: $button-primary !important;
+    }
+}
+.button-border-dark {
+    border-color: $blue !important;
+    font-size: calc(14px + (15 - 14) * (100vw - 400px) / (1920 - 400));
+    color: $blue !important;
+    background-color: transparent !important;
+    border: 1px solid !important;
+    &:hover {
+        background: $blue !important;
+        color: #fff !important;
+        fill: #fff !important;
+        border: 1px solid $blue !important;
+        path {
+            fill: #fff !important;
+        }
+    }
+}
+.button-border-red {
+    border-color: $red-button !important;
+    font-size: calc(14px + (15 - 14) * (100vw - 400px) / (1920 - 400));
+    color: $red-button !important;
+    background-color: transparent !important;
+    border: 1px solid !important;
+    &:hover {
+        background: $red-button !important;
+        color: #fff !important;
+        fill: #fff !important;
+        border: 1px solid $red-button !important;
+        path {
+            fill: #fff !important;
+        }
+    }
+}
+.button-black-rounded {
+    background-color: $primary-black !important;
+    border-radius: 25px !important;
+    width: 94px !important;
+    padding: 6px 0 4px 0 !important;
+}
+.button-link-rounded {
+    background-color: #83c6c2 !important;
+    border-radius: 4px !important;
+    width: 31px !important;
+    padding: 6px 0 4px 0 !important;
+    &:hover {
+        background-color: #1bc5bd !important;
+    }
+}
+.btn-color-filled {
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+.btn-none {
+    background-color: transparent !important;
+    padding: 0px !important;
+}

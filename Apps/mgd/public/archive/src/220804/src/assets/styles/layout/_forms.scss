@@ -1,0 +1,367 @@
+.app-checkbox {
+    .ui {
+        &.checkbox {
+            label {
+                &:before {
+                    border: 2px solid $checkbox-default-color;
+                    background-color: transparent;
+                    width: 14px !important;
+                    height: 14px !important;
+                }
+            }
+            input {
+                &:checked ~ label {
+                    &::before {
+                        background: $blue !important;
+                        border-color: $blue !important;
+                        width: 14px !important;
+                        height: 14px !important;
+                    }
+                    &::after {
+                        color: $white !important;
+                        font-size: 9px;
+                        top: -1px !important;
+                        width: 14px !important;
+                        height: 14px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+.ui {
+    &.radio.checkbox {
+        .input[type="checkbox"],
+        input[type="radio"] {
+            cursor: pointer;
+            @include absolute(top 0 left 0);
+            opacity: 0 !important;
+            outline: 0;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+        }
+        .box,
+        label {
+            padding-left: 2.625em;
+            &:before {
+                top: 13px;
+                border: 2px solid $checkbox-color;
+                left: 16px;
+            }
+            &:after {
+                top: 13px;
+                border: 2px solid $blue !important;
+                left: 16px;
+            }
+        }
+        input {
+            &:checked ~ label {
+                // background: rgba(63, 180, 201, 0.2);
+                font-weight: 500;
+                &::after {
+                    background: $blue !important;
+                }
+                &::before {
+                    border-color: $blue !important;
+                }
+            }
+        }
+    }
+
+    // Tab Css
+    &.secondary {
+        &.pointing {
+            &.menu {
+                margin-bottom: 0px;
+
+                .item {
+                    border-bottom-width: 5px;
+                    &.active {
+                        border-color: $blue;
+                    }
+                }
+            }
+        }
+    }
+
+    .form {
+        .field {
+            &.field {
+                input:-webkit-autofill {
+                    // box-shadow: 0 0 0 100px #fff inset!important;
+                    @include box-shadow(0, 0px, 100px, rgba(255, 255, 255, 1) inset);
+                    border-color: #a0a0a0 !important;
+                }
+            }
+        }
+        input[type="text"],
+        input[type="password"] {
+            border: none;
+            border: 1px solid #f3f6f9;
+            @include border-radius(3px);
+            padding: 16px 10px;
+            color: $primary-black !important;
+
+            @include input-placeholder {
+                color: $primary-black;
+                background-color: transparent;
+            }
+            @include appearance(none);
+        }
+    }
+
+    .label {
+        @include font-size(1);
+        color: $gray-prim;
+        font-weight: 400;
+        padding-bottom: 9px;
+    }
+    .basic {
+        &.red {
+            &.label {
+                @include font-size(1);
+            }
+        }
+    }
+
+    &.selection {
+        &.dropdown {
+            background: $white;
+            // @include box-shadow(0, 4px, 18px, rgba(0, 0, 0, 0.25));
+            @include border-radius(12px);
+        }
+        &.active {
+            &.dropdown {
+                &:hover {
+                    border-color: $primary-grey;
+                    .menu {
+                        border-color: $primary-grey;
+                    }
+                }
+                .menu {
+                    border-color: $primary-grey;
+                }
+            }
+        }
+    }
+}
+
+.switch {
+    height: 22px;
+    margin-right: 1.25em;
+    .ui {
+        &.toggle {
+            &.checkbox {
+                width: 38px;
+                label {
+                    height: 22px;
+                    &:before {
+                        background: transparent !important;
+                        height: 18px;
+                        width: 33px;
+                        border: 3px solid $toggle-grey !important;
+                    }
+                }
+
+                input:checked ~ .box:after,
+                input:checked ~ label:after {
+                    left: 18px;
+                    background-color: $blue !important;
+                }
+                input:checked ~ .box:before,
+                input:checked ~ label:before {
+                    background-color: $primary-grey !important;
+                    border-color: $blue !important;
+                }
+                input:focus:checked ~ .box:before,
+                input:focus:checked ~ label:before {
+                    border-color: $blue !important;
+                }
+                .box,
+                label {
+                    &:after {
+                        background: $white;
+                        box-shadow: none !important;
+                        background: $toggle-grey;
+                        width: 10px;
+                        height: 10px;
+                        top: 4px;
+                        left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+.numericinput-new {
+    right: 11px !important;
+    .number {
+        span{
+            margin-top: auto;
+        }
+    }
+}
+.numericInput {
+    // @include absolute(right 36px);
+    @include absolute(right 10px);
+    max-width: 88px;
+    height: 21px;
+    .numericFields {
+        @include flex(flex);
+        @include align-items(center);
+        @include justify(center);
+        width: 100%;
+        @include border-radius(50px);
+        height: 21px;
+        position: relative;
+        // overflow: hidden;
+        .input {
+            width: 29px;
+            height: 100%;
+            @include flex(flex);
+            // display: none;
+            input[type="text"] {
+                width: 26px;
+                background-color: $green-label-light;
+                border: none;
+                padding: 0px;
+                text-align: center;
+                color: $green;
+                border-radius: 19px !important;
+                @include font-rem(12px, 16px);
+                font-weight: $font-medium;
+                font-family: "Rubik", sans-serif !important;
+            }
+        }
+        div {
+            &:first-child {
+                border-left: none;
+            }
+            &:last-child {
+                border-right: none;
+            }
+        }
+        .bottom-minus {
+            margin: 0 0px 0 9px;
+        }
+        button {
+            width: 20px;
+            padding: 0px;
+            @include flex(flex);
+            @include align-items(center);
+            @include justify(center);
+            background-color: transparent;
+            height: 100%;
+            border: none;
+            margin: 0 0px 0 9px;
+            // border-left: 1px solid $blue;
+            outline: none;
+            cursor: pointer;
+            span.undefined {
+                @include flex(flex);
+                @include align-items(center);
+                @include justify(center);
+            }
+            &.minus {
+                border-left: none;
+                // border-right: 1px solid #3FB4C9;
+            }
+            &:hover {
+                span {
+                    svg{
+                        path{
+                            fill: #1c8e89;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+*[dir="rtl"] {
+    .ui {
+        &.radio.checkbox {
+            .box,
+            label {
+                padding-right: 2.625em;
+                padding-left: 0.938em;
+                &:before {
+                    right: 1em;
+                }
+                &:after {
+                    right: 1em;
+                }
+            }
+        }
+    }
+    .switch {
+        margin-right: 0px;
+        margin-left: 1.25em;
+
+        .ui.toggle.checkbox {
+            label {
+                &:after {
+                    right: 10px;
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+            input {
+                &:checked ~ label:after {
+                    right: 23px;
+                    left: auto;
+                    // transition: all 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+    .numericinput-new {
+        left: 11px !important;
+        right: initial !important;
+        .plus {
+            margin: 0px 6px 0 2px !important;
+        }
+    }
+    .numericInput {
+        right: auto;
+        // left: 38px;
+        left: 10px;
+        .numericFields {
+            .input {
+                width: 29px;
+            }
+            button {
+                // border-left: 0px solid $blue;
+                // border-right: 1px solid $blue;
+
+                &.minus {
+                    // border-left: 1px solid #3FB4C9;
+                    border-right: none;
+                    margin-right: 5px;
+                }
+            }
+            div {
+                &:last-child {
+                    border-left: none;
+                    border-right: 1px solid #3fb4c9;
+                }
+                &:first-child {
+                    border-left: none;
+                    border-right: none;
+                    padding-left: 0 8px;
+                }
+            }
+        }
+    }
+    .sketch-picker {
+        right: auto;
+        left: 8px;
+
+        > .flexbox-fix:nth-child(2) div:last-child {
+            margin-left: 0px !important;
+            margin-right: 4px !important;
+        }
+    }
+}

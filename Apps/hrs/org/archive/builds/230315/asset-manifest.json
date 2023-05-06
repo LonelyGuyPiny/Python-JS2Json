@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "./static/css/main.3df6cc39.chunk.css",
+    "main.js": "./static/js/main.6bffd8e8.chunk.js",
+    "runtime-main.js": "./static/js/runtime-main.208b55f4.js",
+    "static/css/2.5f9f26ad.chunk.css": "./static/css/2.5f9f26ad.chunk.css",
+    "static/js/2.0f96634a.chunk.js": "./static/js/2.0f96634a.chunk.js",
+    "index.html": "./index.html",
+    "precache-manifest.c13d7196573b0e336934f4795415ced8.js": "./precache-manifest.c13d7196573b0e336934f4795415ced8.js",
+    "service-worker.js": "./service-worker.js",
+    "static/js/2.0f96634a.chunk.js.LICENSE.txt": "./static/js/2.0f96634a.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "./static/media/rubik-regular-webfont.c8d981c9.woff",
+    "static/media/arrows-horizontal.svg": "./static/media/arrows-horizontal.62ce1c16.svg",
+    "static/media/semantic.min.css": "./static/media/outline-icons.ef60a4f6.woff",
+    "static/media/login.svg": "./static/media/login.91a9a788.svg",
+    "static/media/logni-bg.svg": "./static/media/logni-bg.317e7802.svg",
+    "static/media/logo-new.png": "./static/media/logo-new.9f5f85a1.png",
+    "static/media/logo.png": "./static/media/logo.70e8d4c0.png",
+    "static/media/logo.svg": "./static/media/logo.ee7cd8ed.svg",
+    "static/media/mainlogo1.png": "./static/media/mainlogo1.525397f8.png",
+    "static/media/mainlogo2.png": "./static/media/mainlogo2.91bd3c92.png",
+    "static/media/mainlogo3.png": "./static/media/mainlogo3.ed288672.png",
+    "static/media/srk.png": "./static/media/srk.20bab9f0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.208b55f4.js",
+    "static/css/2.5f9f26ad.chunk.css",
+    "static/js/2.0f96634a.chunk.js",
+    "static/css/main.3df6cc39.chunk.css",
+    "static/js/main.6bffd8e8.chunk.js"
+  ]
+}

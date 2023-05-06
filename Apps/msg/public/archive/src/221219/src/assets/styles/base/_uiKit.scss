@@ -1,0 +1,242 @@
+.ui.primary{
+    &.button{
+        background-color: $blue;
+        &:hover{
+            background-color: $black;
+        }
+    }
+    &.buttons{
+        .button{
+            background-color: $blue;
+            &:hover{
+                background-color: $black;
+            }
+        }
+    }
+}
+.ui{
+    &.segment{
+        padding: 2em;
+    }
+
+    &.popup{
+        &.asideListPopup {
+            z-index: 9999;
+            right: auto !important;
+            left: 221px !important;
+            padding: 19px 16px 0px 16px;
+
+            @media (max-width:#{$small-screen-up}){ //639px
+                left: auto !important;
+            }
+        }
+    }
+    &.button{
+        &.blue {
+            background-color: $blue;
+            &:hover{
+                background-color: $black;
+            }
+        }
+    }
+}
+.center{
+    text-align: center;
+}
+
+// Range slider Open
+.horizontal-slider{
+    width: 100%;
+    max-width: 311px;
+    height: 50px;
+
+    .example-thumb {
+        top: 14px;
+        width: 24px;
+        height: 24px;
+        line-height: 19px;
+        background: $white;
+        border: 3px solid $blue;
+        box-sizing: border-box;
+        @include box-shadow(0, 4px, 4px, rgba(217,215,215,0.25));
+        @include border-radius(100%);
+    }
+    .example-track {
+        top: 25px;
+        height: 4px;
+        @include border-radius(25px);
+    }
+}
+.example-thumb {
+    font-size: 0px;
+    text-align: center;
+    background-color:$black; 
+    color: $white;
+    cursor: pointer;
+    outline: none !important;
+}
+.example-track {
+    position: relative;
+    background: $blue;
+}
+.example-track{
+    &.example-track-1 {
+        background: #F0F0F0;
+        @include border-radius(3px);
+    }
+}
+
+.rangeSlider{
+    height: auto;
+    @include margin-padding(all, 0, all, 8px 15px);
+    @include flex(flex);
+    @include align-items(center);
+    .ui{
+        &.button {
+            @include margin-padding(all, 0px 0px 0 17px, all, 0);
+            background-color: transparent;
+            font-weight: $font-medium !important;
+            width: 57px;
+        }
+    }
+    &.sm-slider{
+        .ui{
+            &.button {
+                height: auto;
+                border: none;
+
+                svg{
+                    g {
+                        opacity: 1;
+                    }
+                    path {
+                        stroke: $white;
+                    }
+                    ellipse {
+                        fill: $white;
+                    }
+                } 
+            }
+        }
+        .horizontal-slider{
+            height: 24px;
+        }
+        .example-thumb{
+            @include box-shadow(0, 0, 0, rgba(0,0,0,0.25));
+            top: 0px;
+        }
+        .example-track{
+            top: 11px;
+            &.example-track-1 {
+                // background: $white;
+            }
+        }
+    }
+}
+
+// Range slider End
+
+.notification{
+    width: 22px;
+    height: 22px;
+    @include font-rem(12px, 22px);
+    color: $black;
+    background: rgba(63, 180, 201, 0.3);
+    @include flex(flex);
+    @include align-items(center);
+    @include justify(center);
+    @include border-radius(100%);
+    display: none;
+} 
+
+.switchToggle{
+    @include flex(flex);
+    @include align-items(center);
+    @include justify(center);
+    .outerBlock{
+        @include flex(flex);
+        background:transparent;
+        padding: 0.215em;
+        opacity: 0.3;
+        .handleSwitch{
+            color: $black;
+            @include flex(flex);
+            @include align-items(center);
+            @include justify(center);
+            padding: 0.215em 0.292634em;
+            @include transition(all 0.5s ease-in-out 0s);
+            cursor: pointer;
+            border-bottom: 2px solid $primary-darkgrey;
+            span{
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                line-height: 1em;
+                font-size: 0.952em;
+            }
+            .ui.button{
+                padding: 0px !important;
+                text-align: center;
+                line-height: 1.159em;
+                font-size: 0.682em;
+                background-color: transparent;
+                margin: 0px;
+                color: $primary-black;
+                font-weight: 500 !important;
+            }
+            &.active{
+                background: transparent;
+                border-bottom: 2px solid $blue;
+                color: $blue;
+
+                .ui.button{
+                    color:$blue !important;
+                }
+            }
+        }
+    }
+    &.active{
+        .outerBlock{
+            opacity: 1;
+        }
+    }
+}
+
+.middleDropdownCol{
+    .outerBlock{
+        opacity: 1;
+    }
+}
+
+
+// Dropdown Menu
+// rtl CSS 
+
+*[dir="rtl"]{
+    .ui{
+        &.dropdown{
+            text-align: right;
+            .menu{
+                > .item{
+                  text-align: right;
+                }
+            }
+            &.selection{
+                padding: 10px 9px 2px 14px;
+                .dropdown{
+                    &.icon{
+                        right: auto;
+                        left: 1em;
+                    }
+                }
+            }
+        }
+    }
+
+    .example-track{
+        background: #C4C4C4;
+        &.example-track-1 {
+            background: $blue;
+        }
+    }
+} 
